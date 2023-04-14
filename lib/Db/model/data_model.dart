@@ -10,6 +10,5 @@ class FileData{
   String filedata="";
   @HiveField(3)
   bool? value;
-
   FileData({required this.filename,required this.filedata,required this.value,this.id});
 }

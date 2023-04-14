@@ -53,8 +53,8 @@ class _toDoListState extends State<toDoList> {
                     begin: Alignment.topCenter,
                     end: Alignment.bottomCenter,
                     colors: [
-                      Color(0xffff385d),
-                      Color(0xffff385d),
+                      Color(0xffffc738),
+                      Color(0xffefe47c),
                     ],
                   ),
                 ),
@@ -77,7 +77,7 @@ class _toDoListState extends State<toDoList> {
                     title:Text(filelist[index].filename),
                     leading: Checkbox(
                         value:filelist[index].value,
-                        activeColor: Colors.pinkAccent,
+                        activeColor: Colors.orangeAccent,
                         tristate: true,
                         onChanged: (bool? value)=>setState(() {
                           filelist[index].value = value!;
@@ -113,7 +113,7 @@ class _toDoListState extends State<toDoList> {
                           TextFormField(
                             controller: _namecontroller,
                             decoration: const InputDecoration(
-                              enabledBorder: OutlineInputBorder(borderSide: BorderSide(color: Colors.pinkAccent)),
+                              enabledBorder: OutlineInputBorder(borderSide: BorderSide(color: Colors.orangeAccent)),
                               hintText: 'Enter task. ',
                               border: InputBorder.none,
                             ),
@@ -124,7 +124,7 @@ class _toDoListState extends State<toDoList> {
                             keyboardType: TextInputType.multiline,
                             maxLines: null,
                             decoration:const InputDecoration(
-                              enabledBorder: OutlineInputBorder(borderSide: BorderSide(color: Colors.pinkAccent)),
+                              enabledBorder: OutlineInputBorder(borderSide: BorderSide(color: Colors.orangeAccent)),
                               hintText: 'Enter description',
                               border: InputBorder.none,
                             ),
@@ -145,7 +145,7 @@ class _toDoListState extends State<toDoList> {
                               Navigator.pop(context);
                             },
                             child: const Text('OK'),
-                            style: ElevatedButton.styleFrom(primary: Colors.pinkAccent),
+                            style: ElevatedButton.styleFrom(primary: Colors.orangeAccent),
                           )
                         ],
                       )),
@@ -154,7 +154,7 @@ class _toDoListState extends State<toDoList> {
           });
         },
         tooltip: 'New File',
-        backgroundColor: Colors.pinkAccent[200],
+        backgroundColor: Colors.orangeAccent[200],
         child: Icon(Icons.add),
       ),
     );
